@@ -1,5 +1,5 @@
 {% extends "itreporting/base.html" %}
-{% block content %}<h1>Welcome to Student IT Services</h1>
+{% block content %}<h1 class="mb-3">Issues Reported by {{view.kwargs.username}} ({{page_obj.paginator.count}})</h1>
 {% for issue in issues %}
 <article class="media content-section">
     <img class="rounded-circle article-img" src="{{issue.author.profile.image.url}}"/>
